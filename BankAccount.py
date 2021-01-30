@@ -34,3 +34,7 @@ class BankAccount:
     def get_balance(self):
         balance = self.balance
         print(f"Your balance is {balance}")
+
+    def add_interest(self):
+        interest = self.balance * 0.00083
+        self.balance += interest
