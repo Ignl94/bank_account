@@ -38,6 +38,7 @@ class BankAccount:
     def add_interest(self):
         interest = self.balance * 0.00083
         self.balance += interest
+        print(f"Total Interest: {interest}")
 
     def print_receipt(self):
         print(f"{self.name}\nAccount No.: {self.account_number}\nRouting No.: {self.routing_number}\nBalance:{self.balance}")
@@ -47,10 +48,10 @@ accountOne = BankAccount("Cherish")
 accountTwo = BankAccount("Ronald")
 accountThree = BankAccount("Harry")
 
-print(accountOne.deposit(10000))
+accountOne.deposit(10000)
 print("---------------------------")
-print(accountOne.add_interest())
+accountOne.add_interest()
 print("---------------------------")
-print(accountOne.withdraw(500))
+accountOne.withdraw(500)
 print("---------------------------")
-print(accountOne.print_receipt())
+accountOne.print_receipt()
